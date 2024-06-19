@@ -7,6 +7,9 @@
   --delete-color: #DE3838;
   --orange-low: #FFA585;
   --text-dark-selected: #41414D;
+  --shapes-dark: #09090A;
+  --shapes: #DCE2E6;
+  --bg-primary: #F0F0F5;
 }
 
 @media (prefers-color-scheme: dark) {
