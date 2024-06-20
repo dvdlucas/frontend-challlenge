@@ -4,7 +4,7 @@ import { FilterBar } from "../components/filter-bar";
 import { ProductList } from "@/components/products-list";
 import styled from "styled-components";
 
-const PageWrater = styled.main`
+const PageWrapper = styled.main`
  display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,9 +20,9 @@ const PageWrater = styled.main`
 
 export default function Home() {
   return (
-    <PageWrater>
+    <PageWrapper>
       <FilterBar />
       <ProductList />
-    </PageWrater>
+    </PageWrapper>
   );
 }
