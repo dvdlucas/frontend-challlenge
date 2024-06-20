@@ -13,7 +13,7 @@ const FilterList = styled.ul`
     justify-content: center;
     gap: 25px;
     list-style: none;
-    @media(min-width: 768px){
+    @media(min-width: ${props => props.theme.desktopBreakpoint}){
         gap: 40px;
     }
 `
@@ -28,7 +28,7 @@ const FilterItem = styled.li<FilterItemProps>`
     text-transform: uppercase;
     color: ${props => props.selected ? 'var(--text-dark-selected)' : 'var(--text-dark)'};
     border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : ''};
-    @media(min-width: 768px){
+    @media(min-width: ${props => props.theme.desktopBreakpoint}){
         font-size: 16px;
         line-height: 22px;
     }
