@@ -3,10 +3,6 @@ import { useFilter } from "@/hooks/useFilter";
 import { FilterType } from "@/types/filter-type";
 import styled from "styled-components";
 
-interface FilterByTypeProps {
-
-}
-
 interface FilterItemProps {
     selected: boolean;
 }
@@ -15,20 +11,27 @@ const FilterList = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 25px;
     list-style: none;
+    @media(min-width: 768px){
+        gap: 40px;
+    }
 `
 
 const FilterItem = styled.li<FilterItemProps>`
     font-family: inherit;
     font-weight: ${props => props.selected ? '600' : '400'};
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
     color: ${props => props.selected ? 'var(--text-dark-selected)' : 'var(--text-dark)'};
     border-bottom: ${props => props.selected ? '4px solid var(--orange-low)' : ''};
+    @media(min-width: 768px){
+        font-size: 16px;
+        line-height: 22px;
+    }
 `
 
 export function FilterByType() {
