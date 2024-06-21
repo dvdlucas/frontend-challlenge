@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { ArrowIcon } from "./icons/arrow-icon"
 import { useState } from "react"
-import { PriorityTypes } from "@/types/priority-types"
 import { useFilter } from "@/hooks/useFilter"
+import { PriorityTypes } from "@/types/priority-types"
 
 
 const FilterContainer = styled.div`
