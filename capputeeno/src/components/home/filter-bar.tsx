@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { FilterByType } from "./filter-bar-type";
 import { FilterByPriority } from "./filter-by-priority";
 
-interface FilterBarProps {
-
-}
-
 const FilterContainer = styled.div`
     display: flex;
     width: 100%;
@@ -14,7 +10,7 @@ const FilterContainer = styled.div`
     justify-content: space-between;
 `;
 
-export function FilterBar(props: FilterBarProps) {
+export function FilterBar() {
     return (
         <FilterContainer>
             <FilterByType />

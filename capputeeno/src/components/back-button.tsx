@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 export const Button = styled.button`
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     background: transparent;
     border: none;

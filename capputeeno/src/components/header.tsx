@@ -3,7 +3,7 @@
 import styled from "styled-components"
 import { Saira_Stencil_One } from "next/font/google";
 import { PrimaryInputSearchIcon } from "./primary-input";
-import { CartControl } from "./cart-control";
+import { CartControl } from "./cart/cart-control";
 import { useFilter } from "@/hooks/useFilter";
 
 
