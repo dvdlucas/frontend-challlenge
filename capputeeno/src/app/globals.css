@@ -10,6 +10,7 @@
   --shapes-dark: #09090A;
   --shapes: #DCE2E6;
   --bg-primary: #F0F0F5;
+  --secondary-text: #617480;
 }
 
 @media (prefers-color-scheme: dark) {
