@@ -5,7 +5,7 @@ import { InputHTMLAttributes } from "react";
 export const PrimaryInput = styled.input`
     width: 100%;
     border-radius: 8px;
-    border:none;
+    border: none;
     padding: 10px 16px;
     background-color: var(--bg-secondary);
     font-family: inherit;
@@ -39,10 +39,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     handleChange: (value: string) => void;
 }
 
-export function PrimaryInputSearchIcon(props: InputProps) {
+export function PrimaryInputSearchIcon({ handleChange, ...rest }: InputProps) {
     return (
         <InputContainer>
-            <PrimaryInput onChange={(event) => props.handleChange(event.target.value)} {...props} />
+            <PrimaryInput onChange={(event) => handleChange(event.target.value)} {...rest} />
             <SearchIcon />
         </InputContainer>
     )

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { CartIcon } from "./icons/cart-icon";
 import styled from "styled-components";
@@ -11,17 +12,24 @@ const CartCount = styled.span`
     background-color: var(--delete-color);
     color: white;
     margin-left: -10px;
-`
+`;
+
 const Container = styled.div`
     position: relative;
-`
+`;
 
 export function CartControl() {
-    const { value } = useLocalStorage("cart-items", [])
+    const { value } = useLocalStorage("cart-items", []);
+    const [itemCount, setItemCount] = useState(0);
+
+    useEffect(() => {
+        setItemCount(value.length);
+    }, [value]);
+
     return (
         <Container>
             <CartIcon />
-            {value.length && <CartCount>{value.length}</CartCount>}
+            {itemCount > 0 && <CartCount>{itemCount}</CartCount>}
         </Container>
-    )
+    );
 }
